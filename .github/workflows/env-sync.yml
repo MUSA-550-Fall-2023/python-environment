@@ -26,8 +26,8 @@ jobs:
           post-cleanup: "all"
       - shell: bash -l {0}
         run: |
-          mamba info
-          mamba list
+          micromamba info
+          micromamba list
       - shell: bash -l {0}
         run: |
           python -c "import geopandas; print(geopandas.__version__)"
@@ -45,7 +45,7 @@ jobs:
       - name: Setup Anaconda Client
         shell: bash -l {0}
         run: |
-          mamba install --yes anaconda-client
+          micromamba install --yes anaconda-client
       - name: Upload to Anaconda
         shell: bash -l {0}
         env:
@@ -71,7 +71,7 @@ jobs:
       - name: Install MUSA Env
         shell: bash -l {0}
         run: |
-          mamba env create pennmusa/musa-550-fall-2023
+          micromamba env create pennmusa/musa-550-fall-2023
       - name: Test Import
         shell: bash -l {0}
         run: |
