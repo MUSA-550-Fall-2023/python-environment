@@ -16,17 +16,18 @@ jobs:
         python-version: ["3.10"]
     steps:
       - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: mamba-org/setup-micromamba@v1
         with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
-          activate-environment: musa-550-fall-2023
-          environment-file: ./environment.yml
-          auto-activate-base: false
+          micromamba-version: "1.3.1-0"
+          environment-file: environment.yml
+          init-shell: >-
+            bash
+          cache-environment: true
+          post-cleanup: "all"
       - shell: bash -l {0}
         run: |
-          conda info
-          conda list
+          mamba info
+          mamba list
       - shell: bash -l {0}
         run: |
           python -c "import geopandas; print(geopandas.__version__)"
@@ -36,14 +37,15 @@ jobs:
     runs-on: "macos-latest"
     steps:
       - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: mamba-org/setup-micromamba@v1
         with:
-          auto-update-conda: true
-          python-version: 3.10
+          micromamba-version: "1.3.1-0"
+          init-shell: >-
+            bash
       - name: Setup Anaconda Client
         shell: bash -l {0}
         run: |
-          conda install --yes anaconda-client
+          mamba install --yes anaconda-client
       - name: Upload to Anaconda
         shell: bash -l {0}
         env:
@@ -61,14 +63,15 @@ jobs:
         python-version: ["3.10"]
     steps:
       - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: mamba-org/setup-micromamba@v1
         with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
+          micromamba-version: "1.3.1-0"
+          init-shell: >-
+            bash
       - name: Install MUSA Env
         shell: bash -l {0}
         run: |
-          conda env create pennmusa/musa-550-fall-2023
+          mamba env create pennmusa/musa-550-fall-2023
       - name: Test Import
         shell: bash -l {0}
         run: |
