@@ -54,7 +54,7 @@ jobs:
           anaconda -t "$ANACONDA_TOKEN" upload ./musa-550-fall-2023.yml
 
   test-remote-install:
-    needs: env-install
+    needs: [env-install, upload]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
