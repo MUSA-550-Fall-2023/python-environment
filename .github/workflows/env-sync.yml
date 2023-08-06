@@ -66,6 +66,10 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
+      - name: Setup Anaconda Client
+        shell: bash -l {0}
+        run: |
+          conda install --yes anaconda-client
       - name: Install MUSA Env
         shell: bash -l {0}
         run: |
