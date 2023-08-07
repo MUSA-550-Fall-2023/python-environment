@@ -69,7 +69,7 @@ jobs:
       - name: Setup Anaconda Client
         shell: bash -l {0}
         run: |
-          conda install --yes anaconda-client
+          conda install --yes -n base anaconda-client
       - name: Install MUSA Env
         shell: bash -l {0}
         run: |
