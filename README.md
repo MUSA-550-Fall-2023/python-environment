@@ -1,4 +1,4 @@
-# Welcome to MUSA 550: Geospatial Data Science in Python
+# MUSA 550's Python 🐍 Environment
 
 This repository contains the [environment.yml](environment.yml) file 
 specifying the Python packages needed in this course. The majority of course 
