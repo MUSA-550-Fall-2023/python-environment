@@ -3,7 +3,7 @@ channels:
 - conda-forge
 
 dependencies:
-- altair=5.0.1
+- altair=5.1.0
 - beautifulsoup4=4.12.2
 - black=23.7.0
 - bokeh=3.2.1
@@ -72,7 +72,6 @@ dependencies:
   - jupyterlab-quarto==0.1.45
   - jupyter-panel-proxy==0.1.0
   - jupyter-server-proxy==4.0.0
-  - nbgitpuller==1.2.0
   - pygeckodriver==0.33.0
   - pyprojroot==0.3.0
   - us==3.1.1
