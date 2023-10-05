@@ -76,5 +76,6 @@ dependencies:
   - jupyter-server-proxy==4.0.0
   - nbgitpuller==1.2.0
   - pygeckodriver==0.33.0
+  - pygris==0.1.6
   - pyprojroot==0.3.0
   - us==3.1.1
