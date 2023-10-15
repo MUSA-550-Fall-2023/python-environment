@@ -78,3 +78,4 @@ dependencies:
   - pygris==0.1.6
   - pyprojroot==0.3.0
   - us==3.1.1
+  - wordcloud==1.9.2
