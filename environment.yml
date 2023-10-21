@@ -22,8 +22,8 @@ dependencies:
 - holoviews=1.17.0
 - hvplot=0.8.4
 - imageio=2.31.1
-- intake=0.7.0
-- intake-parquet=0.3.0
+- intake=0.6.6
+- intake-parquet=0.2.3
 - intake-xarray=0.7.0
 - ipython=8.14.0
 - jupyterlab=3.6.5
